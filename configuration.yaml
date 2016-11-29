@@ -42,7 +42,7 @@ mqtt:
 
 notify: !include notify.yaml
 
-sensor: !include sensor.yaml
+sensor: !include_dir_merge_list sensors
 
 media_player:
   - platform: samsungtv

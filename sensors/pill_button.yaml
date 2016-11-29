@@ -1,0 +1,14 @@
+# Seconds since Pill Button Sensor changed
+- platform: template
+  sensors:
+    last_pill:
+      unit_of_measurement: Sec
+      friendly_name: Pill Last Taken
+      value_template: '{% if states.sensor.pill_button_sensor.last_updated is undefined %}{{"00:00:00"}}{% else %}{{ ((as_timestamp(states.sensor.time.last_updated)-as_timestamp(states.sensor.pill_button_sensor.last_updated))|int) }}{% endif %}'
+
+# Push Button Sensor 
+- platform: mqtt
+  name: Pill Button Sensor 
+  state_topic: 'dash/pill_reminder' 
+  hide: false   
+
