@@ -1,0 +1,13 @@
+sequence:
+  - service: mqtt.publish
+    data:
+      topic: dash/pill_reminder
+      payload: 'ON'
+      qos: 1
+  - delay:
+      seconds: 1
+  - service: mqtt.publish
+    data:
+      topic: dash/pill_reminder
+      payload: 'OFF'
+      qos: 1

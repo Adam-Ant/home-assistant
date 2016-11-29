@@ -1,0 +1,35 @@
+- alias: Pill Morning Reset
+  trigger:
+    platform: time
+    hours: 06
+    minutes: 0
+    seconds: 0
+  action:
+    - service: script.turn_on
+      entity_id: script.toggle_pill
+
+- alias: Pill Notification Check
+  trigger:
+    platform: time
+    hours: 13
+    minutes: 0
+    seconds: 0
+  condition:
+    condition: numeric_state
+    entity_id: sensor.last_pill
+    above: 25000
+  action:
+    - service: notify.adams_android
+      data:
+        title: 'Take your pills!'
+        message: 'Take your pills you lazy shit!'
+ 
+- alias: Pill Afternoon Reset
+  trigger:
+    platform: time
+    hours: 13
+    minutes: 0
+    seconds: 10
+  action:
+    - service: script.turn_on
+      entity_id: script.toggle_pill

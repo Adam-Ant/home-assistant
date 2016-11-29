@@ -1,0 +1,36 @@
+# Temp and Humidity Monitoring
+- platform: mqtt
+  state_topic: 'tortoise/sensor1'
+  name: 'Temperature'
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  state_topic: 'tortoise/sensor1'
+  name: 'Humidity'
+  unit_of_measurement: '%'
+  value_template: '{{ value_json.humidity }}'
+
+# Plex Media Server
+- platform: plex
+  name: Plex Sensor
+  host: 192.168.1.3
+
+#### Pill Time Counters###
+
+#Current Time
+- platform: time_date
+  display_options:
+    - 'date_time'
+# Seconds since Pill Button Sensor changed
+- platform: template
+  sensors:
+    last_pill:
+      unit_of_measurement: Sec
+      friendly_name: Pill Last Taken
+      value_template: '{% if states.sensor.pill_button_sensor.last_updated is undefined %}{{"00:00:00"}}{% else %}{{ ((as_timestamp(states.sensor.date__time.last_updated)-as_timestamp(states.sensor.pill_button_sensor.last_updated))|int) }}{% endif %}'
+
+# Push Button Sensor 
+- platform: mqtt
+  name: Pill Button Sensor 
+  state_topic: 'dash/pill_reminder' 
+  hide: false   
