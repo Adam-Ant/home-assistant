@@ -1,5 +1,5 @@
 #Current Time
 - platform: time_date
   display_options:
-    - 'date_time'
+    - 'time'
 
