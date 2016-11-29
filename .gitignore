@@ -1,2 +1,6 @@
 secrets.yaml
 known_devices.yaml
+.HA_VERSION
+.uuid
+home-assistant.log
+home-assistant_v2.db

@@ -69,6 +69,10 @@ device_tracker:
     consider_home: 300
     track_new_devices: no
 
+input_boolean: !include input_boolean.yaml
+
+input_slider: !include input_slider.yaml
+
 script: !include_dir_named scripts
 
 automation: !include_dir_merge_list automation
