@@ -1,0 +1,2 @@
+alarm_off: python2 /config/ext_scripts/alarm_off.py
+alarm_on: python2 /config/ext_scripts/alarm_on.py
