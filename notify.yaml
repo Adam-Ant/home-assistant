@@ -9,7 +9,7 @@
 - name: SMS
   platform: twilio_sms
   account_sid: !secret twilio_sid
-  auth_token: !secret twilio_from
+  auth_token: !secret twilio_secret
   from_number: !secret twilio_from
 
 
