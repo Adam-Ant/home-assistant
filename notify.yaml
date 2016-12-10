@@ -1,8 +1,16 @@
 ### Notify:
 
-#Adams Phone
+#Adams Phone Pushover
 - name: Adams Android
   platform: pushover
   api_key: !secret pushover_api
   user_key: !secret pushover_user
+
+- name: SMS
+  platform: twilio_sms
+  account_sid: !secret twilio_sid
+  auth_token: !secret twilio_from
+  from_number: !secret twilio_from
+
+
 
