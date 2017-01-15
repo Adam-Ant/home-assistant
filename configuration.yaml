@@ -72,6 +72,8 @@ device_tracker:
 
 input_boolean: !include input_boolean.yaml
 
+tts: !include tts.yaml
+
 input_slider: !include input_slider.yaml
 
 shell_command: !include shell_command.yaml
