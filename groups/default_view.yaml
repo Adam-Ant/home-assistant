@@ -3,3 +3,4 @@ entities:
   - group.alarmclock
   - sensor.temperature_1
   - sensor.humidity_1
+  - light.dev

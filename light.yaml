@@ -1,0 +1,5 @@
+- platform: mqtt
+  name: 'dev'
+  state_topic: 'den/light1/state'
+  command_topic: 'den/light1/command'
+  optimistic: false
