@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  hass:
+      image: homeassistant/home-assistant
+      volumes:
+        - /volumes/hass:/config
+        - /etc/localtime:/etc/localtime:ro
+      network_mode: "host"
+      container_name: home-assistant
+
