@@ -29,6 +29,11 @@ discovery:
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
+# Enable the recorder to edit the amount of data kept:
+recorder:
+    purge_days: 30
+
+
 # Enables support for tracking state changes over time.
 history:
 
