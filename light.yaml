@@ -3,3 +3,14 @@
   state_topic: 'den/light1/state'
   command_topic: 'den/light1/command'
   optimistic: false
+
+- platform: mqtt
+  name: 'Bedroom RGB Strip'
+  state_topic: 'bed/rgb1/light/status'
+  command_topic: 'bed/rgb1/light/switch'
+  brightness_state_topic: 'bed/rgb1/brightness/status'
+  brightness_command_topic: 'bed/rgb1/brightness/set'
+  rgb_state_topic: 'bed/rgb1/rgb/status'
+  rgb_command_topic: 'bed/rgb1/rgb/set'
+  brightness_scale: 100
+  optimistic: false
