@@ -1,0 +1,9 @@
+- alias: RSS Alert
+  trigger:
+    - platform: event
+      event_type: feedreader
+  action:
+    - service: notify.adams_android
+      data:
+        title: 'New RSS Post!'     
+        message: "{{ trigger.event.data.title }}"
