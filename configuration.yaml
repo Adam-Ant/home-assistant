@@ -50,6 +50,8 @@ notify: !include notify.yaml
 
 sensor: !include_dir_merge_list sensors
 
+fan: !include fan.yaml
+
 media_player:
   - platform: samsungtv
     name: Adams TV

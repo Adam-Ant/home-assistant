@@ -4,3 +4,4 @@ entities:
   - sensor.temperature_1
   - sensor.humidity_1
   - light.dev
+  - fan.bedroom_fan
