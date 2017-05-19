@@ -2,8 +2,8 @@
   name: "Bedroom Fan"
   command_topic: "bed/fan1/command"
   state_topic: "bed/fan1/state"
-  speed_command_topic: "bed/fan1/state"
-  speed_state_topic: "bed/fan1/state"
+  speed_command_topic: "bed/fan1/speed/command"
+  speed_state_topic: "bed/fan1/speed/state"
   retain: true
   speeds:
     - low
