@@ -52,6 +52,11 @@ sensor: !include_dir_merge_list sensors
 
 fan: !include fan.yaml
 
+feedreader:
+  urls:
+   - https://www.reddit.com/r/molotok_sub/new.rss
+   - https://www.reddit.com/r/patches765/new.rss 
+
 media_player:
   - platform: samsungtv
     name: Adams TV
