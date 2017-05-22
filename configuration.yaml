@@ -94,6 +94,8 @@ script: !include_dir_named scripts
 
 light: !include light.yaml
 
-automation: !include_dir_merge_list automation
+automation old: !include_dir_merge_list automation
+
+automation: !include automations.yaml
 
 group: !include_dir_named groups
