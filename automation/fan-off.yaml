@@ -1,0 +1,12 @@
+- alias: Fan Off
+  trigger:
+    platform: time
+    hours: 5
+    minutes: 0
+    seconds: 0
+  condition: 
+    condition: state
+    entity_id: fan.bedroom_fan
+    state: 'on'
+  action:
+    fan.bedroom_fan.turn_on
